@@ -1,0 +1,38 @@
++ GIT_OPT='--depth 1'
++ BUILD=/home/philix/ddt_test
++ ARM_FORGE=/home/philix/arm/forge
++ export OPATH=/home/philix/ddt_test/bin:/home/philix/arm/forge/bin:/opt/rocm/bin:/opt/py/py/bin:/home/philix/bin:/usr/local/bin:/usr/bin:/bin
++ OPATH=/home/philix/ddt_test/bin:/home/philix/arm/forge/bin:/opt/rocm/bin:/opt/py/py/bin:/home/philix/bin:/usr/local/bin:/usr/bin:/bin
++ export PATH=/home/philix/ddt_test/bin:/home/philix/arm/forge/bin:/home/philix/ddt_test/bin:/home/philix/arm/forge/bin:/opt/rocm/bin:/opt/py/py/bin:/home/philix/bin:/usr/local/bin:/usr/bin:/bin
++ PATH=/home/philix/ddt_test/bin:/home/philix/arm/forge/bin:/home/philix/ddt_test/bin:/home/philix/arm/forge/bin:/opt/rocm/bin:/opt/py/py/bin:/home/philix/bin:/usr/local/bin:/usr/bin:/bin
++ gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 8.3.0-6' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 8.3.0 (Debian 8.3.0-6) 
++ cmake --version
+cmake version 3.13.4
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
++ uname -a
+Linux fad 5.2.0-0.bpo.3-amd64 #1 SMP Debian 5.2.17-1~bpo10+1 (2019-09-30) x86_64 GNU/Linux
++ ddt -v
+Arm DDT
+Part of Arm Forge.
+Copyright (c) 2002-2019 Arm Limited (or its affiliates). All rights reserved.
+
+Version: 19.1.4
+Build ID: da219a7ddd81
+Build Platform: Ubuntu 16.04 x86_64
+Build Date: Oct  2 2019 12:55:51
+
+Frontend OS: Debian GNU/Linux 10 (buster)
+Nodes' OS: unknown
+Last connected ddt-debugger: unknown
++ which mpicc
+/home/philix/ddt_test/bin/mpicc
