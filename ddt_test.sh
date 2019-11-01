@@ -39,3 +39,7 @@ cd $BUILD/phare && git submodule update --init
 rm -rf build && mkdir -p build && cd build
 cmake -DSAMRAI_ROOT=$BUILD/samrai -DCMAKE_INSTALL_PREFIX=$BUILD -DCMAKE_BUILD_TYPE=Debug ..
 make -j
+
+ddt -n 2 --debug --log=$PWD/DDT_PHARE.log $BUILD/phare/build/tests/amr/messengers/test-messenger
+# break point $BUILD/phare/src/amr/data/field/file_data.h:231
+#  step over a few times
